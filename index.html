@@ -11,9 +11,23 @@
 <!-- added a container to seperate the content from the rest of the page -->
     <div class="container p-4">
 <div id="nav-placeholder"></div>
-<h1>Welcome to Jettra Koy's Portfolio</h1>
-<p>Welcome everyone! Today I will be showcasing my portfolio and sharing some of my projects. 
-You will find my skills, projects, and my hobbies so you can get a better understanding of who I am and what I do.</p>
+<div class="row align-items-center g-4 mt-3">
+    <div class="col-md-8">
+        <h1>Welcome to Jettra Koy's Portfolio</h1>
+        <p>
+            Welcome everyone! Today I will be showcasing my portfolio and sharing
+            some of my projects. You will find my skills, projects, and my hobbies
+            so you can get a better understanding of who I am and what I do.
+        </p>
+    </div>
+
+    <div class="col-md-4 text-center">
+        <img src="images/profile.jpg"
+             alt="Portrait of Jettra Koy"
+             width="250"
+             class="img-fluid rounded">
+    </div>
+</div>
 </div>
 <script>
     $("#nav-placeholder").load("navbar.html");
