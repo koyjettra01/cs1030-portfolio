@@ -1,0 +1,66 @@
+/* Give every page a black background and white text. */
+body {
+    background-color: #000;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Keep links easy to identify against the dark background. */
+a,
+.nav-link {
+    color: #9bd1ff;
+}
+
+a:hover,
+.nav-link:hover {
+    color: #fff;
+}
+
+/* Keep keyboard navigation clearly visible. */
+a:focus-visible {
+    outline: 3px solid #ffe082;
+    outline-offset: 3px;
+}
+/* Keep the decorative stars behind the page content. */
+body {
+    isolation: isolate;
+}
+/* Draw small stars without adding image files. */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background-image:
+        radial-gradient(circle at 20px 30px, white 1px, transparent 2px),
+        radial-gradient(circle at 100px 150px, #b7d9ff 1px, transparent 2px),
+        radial-gradient(circle at 170px 80px, white 1.5px, transparent 2.5px);
+
+    background-size:
+        230px 210px,
+        340px 290px,
+        410px 370px;
+
+    opacity: 0.22;
+    animation: star-glimmer 2s ease-in-out 2;
+}
+
+/* Gently brighten and dim the stars twice, then stop. */
+@keyframes star-glimmer {
+    0%, 100% {
+        opacity: 0.22;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* Leave stars still when the visitor prefers reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+    body::before {
+        animation: none;
+    }
+}
