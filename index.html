@@ -11,6 +11,7 @@
 <!-- added a container to seperate the content from the rest of the page -->
     <div class="container p-4">
 <div id="nav-placeholder"></div>
+<!-- Arrange the introduction and portrait side by side on wider screens and stack them on smaller screens. -->
 <div class="row align-items-center g-4 mt-3">
     <div class="col-md-8">
         <h1>Welcome to Jettra Koy's Portfolio</h1>
@@ -22,6 +23,7 @@
     </div>
 
     <div class="col-md-4 text-center">
+<!-- Describe the portrait with alt text so visitors using screen readers can understand the image. -->        
         <img src="images/profile.jpg"
              alt="Portrait of Jettra Koy"
              width="250"
@@ -29,6 +31,7 @@
     </div>
 </div>
 </div>
+<!-- Load the shared navigation file so menu updates apply consistently across all three pages. -->
 <script>
     $("#nav-placeholder").load("navbar.html");
 </script>
